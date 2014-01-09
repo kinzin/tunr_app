@@ -4,13 +4,11 @@ describe BandMembershipsController do
   describe "if given Them Crooked Vultures" do 
     before do 
       @vultures = Band.create({
-        name: "Them Crooked Vultures", 
-        genre: "Stoner Rock" 
+        name: "Them Crooked Vultures",  
       })
 
       @musician = Musician.create({
         name:"Joshua Homme", 
-        age: 40
       })
     end
 
