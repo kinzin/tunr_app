@@ -4,7 +4,15 @@ class Musician < ActiveRecord::Base
 
   attr_accessible :name
 
+  def join(band, instrument)
+    BandMembership.create(
+      instrument: instrument,
+      band: band,
+      musician: self
+      )
+    # self.bands << band
 
+  end
 
 
 end
