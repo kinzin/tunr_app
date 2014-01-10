@@ -14,7 +14,7 @@ describe "creating a band membership" do
       select @white_stripes.name, {:from => 'band_id'}
       fill_in 'instrument', {with: 'Guitar'}
 
-      click_button 'submit'
+      click_button "submit"
 
       @jack.bands.should include @white_stripes
 
