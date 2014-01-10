@@ -40,7 +40,6 @@ class BandsController < ApplicationController
     redirect_to bands_path
   end
 
-
 ### FORM HELPERS OPTION
   # def new
   #   @band = Band.new
@@ -57,9 +56,5 @@ class BandsController < ApplicationController
         #  <%= f.submit %> 
         # <% end %> 
 ###--
-
-  
-
-  
 
 end

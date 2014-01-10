@@ -1,31 +1,15 @@
 require 'spec_helper'
 
 describe BandsController do 
-  describe "Given a band" do
-    before do
-      @band_name = "Metallica"
-    end
+  describe "Creating a band" do 
     describe "Starting on a new band page" do
       before do
         visit new_band_path
       end
-      it  "makes a new band from a form" do
-        fill_in :name, with: @band_name
-        click_button 'submit'
-        current_path.should == bands_path
-        page.should have_content @band_name
-      end
-    end
-  end
-
-  describe "creating a band" do 
-    describe "starting on the new bands page" do
-      before do
-        visit new_band_path
-      end
-      it "can create a band" do
+      it "makes a new band from a form" do
         fill_in 'name', {with: 'Led Zeppelin'}
         click_button 'submit'
+        current_path.should == bands_path
         page.should have_content('Led Zeppelin')
       end
     end

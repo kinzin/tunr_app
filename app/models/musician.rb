@@ -13,4 +13,10 @@ class Musician < ActiveRecord::Base
   end
 
 
+  def self.invent_name 
+    Faker::Name.first_name + Faker::Name.first_name
+  end
+
+
+
 end

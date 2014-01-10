@@ -1,9 +1,19 @@
 <h1>Musicians</h1>
 
-<ul>
+<table class="table table-hover">
   <% @musicians.each do |musician| %>
-    <a href="<%= musician_path(musician) %>">
-      <li><%= musician.name %></li>
-    </a>
+  <tr class="musician_<%=musician.id%>">
+    <td class="name">
+      <a href="<%= musician_path(musician) %>">
+        <%= musician.name %>
+      </a>
+    </td>
+    <td>
+      <form action="<%= musician_path(musician) %>" method="post">
+        <input type="hidden" value="delete" name="_method">
+        <button class="delete btn-link" id="delete">&#10007;</button>
+      </form>
+    </td>
+  </tr>
   <% end %>
-</ul>
+</table>
