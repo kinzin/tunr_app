@@ -5,13 +5,14 @@
     <tr>
       <td>Band</td>
       <td>Instrument Played</td>
+      <td>Delete Membership</td>
     </tr>
   </thead>
 
   <tbody>
-    <tr>
     <% @musician.bands.each do |band| %>
-      <td>
+    <tr>
+      <td class="name">
         <a href="<%= band_path(band) %>">
           <%= band.name %>
         </a>
@@ -19,7 +20,13 @@
       <td>
         <%= BandMembership.where(musician_id: @musician.id, band_id: band.id).first.instrument %>
       </td>  
-      <% end %>
+      <td>
+        <form action="<%= musician_path(@musician) %>" method="post">
+          <input type="hidden" value="delete" name="_method">
+          <button class="delete btn-link" id="delete">&#10007;</button>
+        </form>
+      </td>
     </tr>
+    <% end %>
   </tbody>
 </table>
