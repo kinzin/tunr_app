@@ -38,14 +38,17 @@ td, a, input {
 }
 
 .form-control {
+  margin:10px;
   height: 55px;
   font-size: 1.7em;
+  text-align: left;
 }
 
 .btn-lg {
   padding:22px;
   background-color: #003F53;
   color: #FFF8A6;
+  border: hidden;
 }
 
 button, select{
