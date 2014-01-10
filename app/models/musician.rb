@@ -10,8 +10,6 @@ class Musician < ActiveRecord::Base
       band: band,
       musician: self
       )
-    # self.bands << band
-
   end
 
 

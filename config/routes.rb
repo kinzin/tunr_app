@@ -3,6 +3,8 @@ TunrApp::Application.routes.draw do
   resources :musicians
   resources :bands
   resources :band_memberships
+
+  get '/' => 'bands#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

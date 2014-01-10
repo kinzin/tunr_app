@@ -1,6 +1,20 @@
 <h1>Bands</h1>
 <ul>
 <% @bands.each do |band| %>
-  <li><%= band.name %></li>
+  <li>
+    <a href="<%= band_path(band)%>">
+      <%= band.name %>
+    </a>
+  </li>
+    <ol>
+    <% band.musicians.each do |musician| %>
+      <li>
+        <a href="<%= musician_path(musician) %>">
+          <%= musician.name %>
+          (<%= BandMembership.where(musician_id: musician.id, band_id: band.id).first.instrument %>)
+        </a>
+      </li>
+    <% end %>
+  </ol>
 <% end %>
 </ul>

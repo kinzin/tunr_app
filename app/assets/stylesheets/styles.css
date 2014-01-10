@@ -1,0 +1,27 @@
+h1, div, td {
+  font-family: 'Quicksand';
+  /*font-size: 1.5em;*/
+}
+
+.container{
+  padding-top: 20px;
+}
+
+form{
+  margin: 30px 0px;
+}
+h1 {
+  font-size: 3em;
+}
+
+td, a, input {
+  font-size: 1.7em;
+}
+
+.form_control {
+  height: 40px;
+}
+
+button, select{
+  margin: 10px 0;
+}

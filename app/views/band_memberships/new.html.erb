@@ -1,14 +1,24 @@
 <form action="<%= band_memberships_path %>" method="post">
-  <input type="text" name="instrument">
-  <select name="musician_id" >
-    <% @musicians.each do |musician| %> 
-      <option value="<%=musician.id%>"><%= musician.name %></option>
-    <% end %>
-  </select>
-  <select name="band_id" >
-    <% @bands.each do |band| %> 
-      <option value="<%=band.id %>"><%= band.name %></option>
-    <% end %>
-  </select>
-  <button id="submit">Create Band Membership!</button>
+  <input class="form-control" id="focusedInput" type="text" name="instrument">
+  <div class="row">
+    <div class="col-lg-7">
+      <select class="form-control input-lg" name="musician_id" >
+        <% @musicians.each do |musician| %> 
+          <option value="<%=musician.id%>"><%= musician.name %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-7">
+    <select class="form-control input-lg" name="band_id" >
+      <% @bands.each do |band| %> 
+        <option value="<%=band.id %>"><%= band.name %></option>
+      <% end %>
+    </select>
+    </div>
+  </div>
+  <button type="button" class="btn btn-default btn-lg" disabled="disabled" id="submit">
+    Create Band Membership!
+  </button>
 </form>
