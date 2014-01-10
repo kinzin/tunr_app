@@ -13,7 +13,7 @@ h1, div, td {
 
 body{
   /*background-image:url('http://images5.fanpop.com/image/photos/28400000/Music-music-28474589-1920-1200.jpg');*/
-  background-image:url('bg.jpg');
+  background-image: url('bg.jpg');
   background-size: cover;
 }
 

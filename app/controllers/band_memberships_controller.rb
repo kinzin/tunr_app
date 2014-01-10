@@ -17,7 +17,7 @@ class BandMembershipsController < ApplicationController
       band_id: params[:band_id],
       instrument: params[:instrument],
       )
-    redirect_to band_memberships_path
+    redirect_to bands_path
   end
 
 
