@@ -5,6 +5,8 @@ TunrApp::Application.routes.draw do
   resources :band_memberships
 
   get '/' => 'bands#index'
+
+  post '/bands/:id' => 'bands#update'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

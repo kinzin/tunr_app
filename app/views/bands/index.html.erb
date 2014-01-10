@@ -1,9 +1,17 @@
 <h1>My Music</h1>
 <table class="table table-hover">
   <% @bands.each do |band| %>
-  <tr>
+  <tr class="band_<%=band.id%>">
     <td>
       <a href="<%= band_path(band)%>"><%= band.name %></a>
+    </td>
+    <td>
+      <a href="<%= edit_band_path(band) %>">&#9998;</a></td>
+    <td>
+      <form action="<%= band_path(band) %>" method="post">
+        <input type="hidden" value="delete" name="_method">
+        <button class="delete btn-link" id="delete">&#10007;</button>
+      </form>
     </td>
   </tr>
   <% end %>

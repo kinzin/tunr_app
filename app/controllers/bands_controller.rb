@@ -1,28 +1,45 @@
 class BandsController < ApplicationController
 
 #         bands GET    /bands(.:format)              bands#index
-#               POST   /bands(.:format)              bands#create
-#      new_band GET    /bands/new(.:format)          bands#new
-#     edit_band GET    /bands/:id/edit(.:format)     bands#edit
-#          band GET    /bands/:id(.:format)          bands#show
-#               PUT    /bands/:id(.:format)          bands#update
-#               DELETE /bands/:id(.:format)          bands#destroy
-  
-
   def index
     @bands = Band.all
   end  
 
-### WRITE YOUR OWN FORM
-  def new
-  
-  end
-
+#               POST   /bands(.:format)              bands#create
   def create
     Band.create(name: params[:name])
     redirect_to bands_path
   end
-###--
+
+#      new_band GET    /bands/new(.:format)          bands#new
+  def new
+  
+  end
+
+#     edit_band GET    /bands/:id/edit(.:format)     bands#edit
+  def edit
+    @band = Band.find(params[:id])
+  end
+
+#          band GET    /bands/:id(.:format)          bands#show
+  def show
+    @band = Band.find(params[:id])
+  end
+
+#               PUT    /bands/:id(.:format)          bands#update
+  def update
+    band = Band.find(params[:id])
+    band.name = params[:band_name]
+    band.save
+    redirect_to band_path(band)
+  end
+
+#               DELETE /bands/:id(.:format)          bands#destroy
+  def destroy
+    Band.delete(params[:id])
+    redirect_to bands_path
+  end
+
 
 ### FORM HELPERS OPTION
   # def new
@@ -41,8 +58,8 @@ class BandsController < ApplicationController
         # <% end %> 
 ###--
 
-  def show
-    @band = Band.find(params[:id])
-  end
+  
+
+  
 
 end
