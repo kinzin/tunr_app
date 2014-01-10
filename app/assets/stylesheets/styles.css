@@ -1,10 +1,19 @@
 h1, div, td {
   font-family: 'Quicksand';
-  /*font-size: 1.5em;*/
+  color: #DDCC04;
 }
 
 .container{
   padding-top: 20px;
+  background-color: rgba(0,0,0,.5);
+  border: 0 hidden;
+  border-bottom-left-radius:50px;
+  border-bottom-right-radius:50px;
+}
+
+body{
+  background-image:url('http://images5.fanpop.com/image/photos/28400000/Music-music-28474589-1920-1200.jpg');
+  background-size: cover;
 }
 
 form{
@@ -16,12 +25,24 @@ h1 {
 
 td, a, input {
   font-size: 1.7em;
+  
 }
 
-.form_control {
-  height: 40px;
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+.form-control {
+  height: 55px;
+  font-size: 1.7em;
+}
+
+.btn-lg {
+  padding:22px;
+  background-color: #003F53;
+  color: #FFF8A6;
 }
 
 button, select{
-  margin: 10px 0;
+  margin: 20px 0 0 0;
 }
