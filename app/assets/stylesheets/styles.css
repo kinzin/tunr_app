@@ -24,9 +24,14 @@ h1 {
   font-size: 3em;
 }
 
-td, a, input {
+td, a {
   font-size: 1.7em;
   text-align: center;
+}
+
+
+input {
+  font-size: 1.7em;
 }
 
 .name {

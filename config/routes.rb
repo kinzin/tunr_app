@@ -1,8 +1,13 @@
 TunrApp::Application.routes.draw do
 
+  devise_for :users
+
   resources :musicians
   resources :bands
   resources :band_memberships
+
+
+  root :to => 'bands#index'
 
   get '/' => 'bands#index'
 

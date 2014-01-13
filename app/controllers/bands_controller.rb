@@ -1,6 +1,8 @@
 class BandsController < ApplicationController
 
 #         bands GET    /bands(.:format)              bands#index
+  before_filter :authenticate_user!, except: [:index, :show]
+
   def index
     @bands = Band.all
   end  
